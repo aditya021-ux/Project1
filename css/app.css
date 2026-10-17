@@ -1,0 +1,71 @@
+
+
+
+
+
+.tabs{display:flex;border-top:1px solid #e3e7ed;background:#fff}
+.tabs button{flex:1;border:0;background:none;padding:9px 0 11px;font:500 .72rem Figtree,sans-serif;color:#5b6578;cursor:pointer}
+.tabs button.on{color:#8a6a2c;font-weight:600}.tabs button em{display:block;font-style:normal;font-size:1.15rem}
+.app h2{font-size:2.1rem;line-height:1.02;margin:8px 0 14px}.app h3{font:600 1rem Figtree,sans-serif;margin:0}
+.app input[type=text],.app input[type=search]{width:100%;padding:11px 14px;border:1px solid #cfd6df;border-radius:12px;font:inherit;background:#fff;color:#14213d}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:10px 0 6px}
+.chip{flex:none;border:1px solid #cfd6df;background:#fff;color:#14213d;border-radius:99px;padding:5px 12px;font:500 .8rem Figtree,sans-serif;cursor:pointer}
+.chip.on{background:#0e1a2b;color:#f3e3bd;border-color:#0e1a2b}
+.job{background:#fff;border:1px solid #eceef2;border-radius:20px;padding:15px;margin:12px 0;cursor:pointer;position:relative;box-shadow:0 1px 2px rgba(14,26,43,.04),0 14px 28px -16px rgba(14,26,43,.22)}
+.job .logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:800;float:left;margin-right:10px}
+.job small{color:#5b6578;display:block}.job .meta{clear:both;padding-top:8px;display:flex;gap:6px;flex-wrap:wrap}
+.pill{background:#edf1f0;color:#0f4c45;border-radius:99px;padding:3px 10px;font-size:.72rem;font-weight:500}
+.pill.y{background:#f6efdf;color:#7a5a1c}.pill.g{background:#eceff3;color:#3b465a}
+.save{position:absolute;right:10px;top:10px;border:0;background:none;font-size:1.25rem;cursor:pointer;color:#e4572e}
+.btn{display:block;width:100%;border:0;border-radius:16px;padding:15px;background:#0e1a2b;color:#f3e3bd;font:500 1rem Figtree,sans-serif;letter-spacing:.01em;cursor:pointer;margin-top:12px;box-shadow:0 10px 22px -10px rgba(14,26,43,.6)}
+.btn.alt{background:#fff;color:#0e1a2b;border:1px solid #d9dde4;box-shadow:none}.btn:disabled{background:#b6c2c0;cursor:not-allowed}
+.back{border:0;background:none;font:600 .9rem Figtree,sans-serif;color:#8a6a2c;cursor:pointer;padding:6px 0}
+.bar{height:8px;background:#e3e7ed;border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#b8924a,#e0c488);transition:width .3s}
+.check{display:flex;gap:8px;font-size:.85rem;margin:4px 0;color:#5b6578}.check.ok{color:#075e53}
+.steps{display:flex;gap:4px;margin:10px 0 2px}.steps i{flex:1;height:6px;border-radius:4px;background:#e3e7ed}.steps i.d{background:#b8924a}
+.sheet{position:absolute;inset:0;background:rgba(10,16,30,.5);display:flex;align-items:flex-end;z-index:5}
+.sheet>div{background:#fff;width:100%;border-radius:24px 24px 0 0;padding:18px 16px 22px}
+.toast{position:absolute;left:16px;right:16px;bottom:78px;background:#14213d;color:#fff;padding:10px 14px;border-radius:12px;font-size:.85rem;z-index:9}
+.empty{text-align:center;color:#5b6578;padding:40px 10px}
+.err{color:#c23b17;font-size:.8rem;margin-top:4px}
+.welcome{background:radial-gradient(120% 70% at 100% 0%,rgba(184,146,74,.28),transparent 60%),linear-gradient(170deg,#0a1322 0%,#10283a 60%,#0f4c45 130%);color:#fff;flex:1;padding:50px 24px 24px;display:flex;flex-direction:column;justify-content:flex-end}
+.welcome h2{font-size:3.1rem;line-height:.98;color:#fff;margin-bottom:14px}.welcome p{opacity:.9}
+.welcome input{margin-top:10px}
+.hint{text-align:center;font-size:.85rem;color:var(--muted);margin-top:10px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f6f7f9;color:#0e1a2b;font:16px/1.55 Figtree,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+.app{--line:#e3e7ed;--muted:#5b6578;min-height:100dvh;display:block}
+.app h1,.app h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.01em}
+button:focus-visible,input:focus-visible,.job:focus-visible,a:focus-visible,label:focus-within{outline:3px solid #b8924a;outline-offset:2px}
+.side{display:none}
+.main{max-width:720px;margin:0 auto;width:100%;padding:calc(env(safe-area-inset-top,0px) + 14px) 16px calc(96px + env(safe-area-inset-bottom,0px))}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -10px 24px -16px rgba(14,26,43,.35)}
+.tabs button em,.side nav button em{font-style:normal}
+.split .det{display:none}.split.show-det .list{display:none}.split.show-det .det{display:block}
+.job.sel{border-color:#b8924a;box-shadow:0 0 0 1px #b8924a}
+.sheet{position:fixed;inset:0;z-index:30;display:flex;align-items:flex-end}.sheet>div{max-width:560px;margin:0 auto;padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))}
+.toast{position:fixed;left:16px;right:16px;max-width:420px;margin:0 auto;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:40}
+.app.is-welcome .welcome{min-height:100dvh}.welcome>div:first-child{left:24px}
+.welcome>*{width:100%;max-width:480px}
+@media(min-width:900px){
+.app{display:grid;grid-template-columns:250px minmax(0,1fr)}.app.is-welcome{display:block}
+.side{display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh;padding:30px 16px;background:#0e1a2b;color:#fff}
+.brand{font:400 2.1rem 'Instrument Serif',Georgia,serif;color:#e0c488;margin:0 0 26px 12px}
+.side nav{display:flex;flex-direction:column;gap:4px}
+.side nav button{display:flex;gap:12px;align-items:center;background:none;border:0;color:#c9d1e0;padding:11px 14px;border-radius:12px;font:500 .98rem Figtree,sans-serif;cursor:pointer;text-align:left}
+.side nav button em{width:22px;text-align:center}.side nav button:hover{background:rgba(255,255,255,.06)}
+.side nav button.on{background:rgba(224,196,136,.15);color:#f3e3bd}
+.side .cs{margin:auto 12px 0;color:#e0c488;font-size:.9rem}
+.tabs{display:none}
+.main{max-width:1180px;padding:34px 40px}.main>*:not(.split){max-width:720px}
+.split{display:grid;grid-template-columns:minmax(340px,430px) minmax(0,1fr);gap:30px;align-items:start}
+.split .det,.split.show-det .list{display:block}
+.list{max-height:calc(100vh - 68px);overflow-y:auto;padding:0 8px 0 0}
+.det{position:sticky;top:34px;background:#fff;border:1px solid #eceef2;border-radius:26px;padding:30px;min-height:380px}
+.back{display:none}
+.sheet{align-items:center}.sheet>div{max-width:440px;border-radius:26px}
+.toast{bottom:30px}
+.welcome{align-items:center;justify-content:center;padding:40px}.welcome h2{font-size:4.2rem}
+}

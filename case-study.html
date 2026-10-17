@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0e1a2b"><title>Firstday: UX/UI Case Study</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600&display=swap"><link rel="stylesheet" href="css/case-study.css"></head>
+<body><div class="wrap">
+<header class="hero">
+  <h1>Firstday: a job portal built for freshers</h1>
+  <p>UX/UI capstone case study with a working clickable prototype. Search entry-level jobs, build a profile, upload a resume, apply and track every application.</p>
+  <p><a class="open" href="index.html">Open the working app</a></p><nav class="toc" aria-label="Case study sections">
+    <a href="#empathize">Empathize</a><a href="#define">Define</a><a href="#ideate">Ideate</a><a href="#ui">UI system</a><a href="#test">Test</a><a href="index.html">Open the app</a>
+  </nav>
+</header>
+<div class="layout">
+<main>
+<section class="cs" id="empathize">
+  <span class="tag">1. Empathize</span>
+  <h2>User research</h2>
+  <p class="note">Sample data for this case study (survey of 40 final-year students plus 5 interviews). Replace with your own findings before submitting.</p>
+  <div class="grid2">
+    <div class="box"><div class="stat">78%</div>Said they don’t know which jobs match “no experience”.</div>
+    <div class="box"><div class="stat">65%</div>Reapply with the same details on every site; no saved profile.</div>
+    <div class="box"><div class="stat">71%</div>Never hear back and can’t tell if a company viewed their application.</div>
+    <div class="box"><div class="stat">52%</div>Saw listings asking for 2+ years of experience under “fresher”.</div>
+  </div>
+  <h3 style="margin-top:18px">Interview themes</h3>
+  <div class="grid2">
+    <div class="box"><h3>Overwhelmed</h3><ul><li>Hundreds of listings, few relevant</li><li>Filters hide “fresher” and “internship”</li></ul></div>
+    <div class="box"><h3>Unsure</h3><ul><li>Resume feels weak without projects</li><li>Don’t know salary norms</li></ul></div>
+    <div class="box"><h3>Ignored</h3><ul><li>No status after applying</li><li>No rejection feedback</li></ul></div>
+    <div class="box"><h3>Short on time</h3><ul><li>Applying on a phone between classes</li><li>Long forms get abandoned</li></ul></div>
+  </div>
+  <h3 style="margin-top:18px">Competitor gaps</h3>
+  <table><tr><th>Portal</th><th>Strength</th><th>Gap for freshers</th></tr>
+  <tr><td>LinkedIn</td><td>Network, brand</td><td>Experience-heavy, noisy</td></tr>
+  <tr><td>Naukri</td><td>Volume</td><td>Cluttered, hard filters</td></tr>
+  <tr><td>Internshala</td><td>Fresher focus</td><td>Weak status tracking</td></tr></table>
+
+  <h3 style="margin-top:22px">Empathy map: Ananya, final-year B.Com</h3>
+  <div class="empathy">
+    <div class="box"><h3>Says</h3><ul><li>“Everything asks for experience.”</li><li>“Did they even see my resume?”</li></ul></div>
+    <div class="box"><h3>Thinks</h3><ul><li>Am I good enough?</li><li>Friends already got offers.</li></ul></div>
+    <div class="box"><h3>Does</h3><ul><li>Applies to 30+ jobs a week</li><li>Keeps a spreadsheet of applications</li></ul></div>
+    <div class="box"><h3>Feels</h3><ul><li>Anxious, ignored</li><li>Hopeful when shortlisted</li></ul></div>
+  </div>
+  <div class="grid2" style="margin-top:10px">
+    <div class="box"><h3>Pains</h3><ul><li>Repeated forms</li><li>No updates</li><li>Irrelevant jobs</li></ul></div>
+    <div class="box"><h3>Gains</h3><ul><li>Clear fresher jobs</li><li>One profile, one tap apply</li><li>Visible progress</li></ul></div>
+  </div>
+</section>
+
+<section class="cs" id="define">
+  <span class="tag">2. Define</span>
+  <h2>Persona</h2>
+  <div class="box persona">
+    <div class="avatar" aria-hidden="true">A</div>
+    <div style="flex:1;min-width:220px">
+      <h3>Ananya Sharma, 21</h3>
+      <p class="note" style="margin:0">Final-year B.Com student, Shimla. Uses an Android phone for 90% of her job search.</p>
+      <ul style="color:var(--muted);padding-left:18px"><li><b>Goal:</b> land a first job in finance or operations before graduation.</li><li><b>Frustration:</b> retyping details, silence after applying.</li><li><b>Needs:</b> relevant listings, a reusable profile, status updates.</li><li><b>Tech comfort:</b> high on mobile, low patience for long forms.</li></ul>
+    </div>
+  </div>
+  <h2 style="margin-top:22px">Problem statement</h2>
+  <div class="pstmt">Fresh graduates need a fast, clear way to find entry-level jobs and apply once with a reusable profile, because today’s portals bury them in experience-heavy listings and leave them guessing about their application status.</div>
+  <h3>How might we…</h3>
+  <ul><li>show only roles a fresher can realistically get?</li><li>make a profile and resume reusable in one tap?</li><li>keep applicants informed after they apply?</li></ul>
+</section>
+
+<section class="cs" id="ideate">
+  <span class="tag">3. Ideate</span>
+  <h2>Information architecture</h2>
+  <ul class="tree">
+    <li><span>Firstday</span>
+      <ul>
+        <li><span>Welcome / Sign up</span></li>
+        <li><span>Jobs (home)</span><ul><li><span>Search</span></li><li><span>Filters: type, location, field</span></li><li><span>Job detail</span><ul><li><span>Apply sheet</span></li></ul></li></ul></li>
+        <li><span>Saved</span></li>
+        <li><span>Applications</span><ul><li><span>Status tracker</span></li></ul></li>
+        <li><span>Profile</span><ul><li><span>Basic info</span></li><li><span>Skills</span></li><li><span>Resume upload</span></li><li><span>Completion meter</span></li></ul></li>
+      </ul>
+    </li>
+  </ul>
+  <h3 style="margin-top:18px">Core user flow</h3>
+  <div class="flow"><span>Sign up</span><i>→</i><span>Add profile + resume</span><i>→</i><span>Search and filter</span><i>→</i><span>View job</span><i>→</i><span>Apply</span><i>→</i><span>Track status</span></div>
+  <h3 style="margin-top:18px">Ideas prioritised</h3>
+  <table><tr><th>Feature</th><th>Impact</th><th>Effort</th><th>In prototype</th></tr>
+  <tr><td>Fresher-only job type chips</td><td>High</td><td>Low</td><td>Yes</td></tr>
+  <tr><td>Profile completion meter</td><td>High</td><td>Low</td><td>Yes</td></tr>
+  <tr><td>One-tap apply with saved resume</td><td>High</td><td>Med</td><td>Yes</td></tr>
+  <tr><td>Application status tracker</td><td>High</td><td>Med</td><td>Yes</td></tr>
+  <tr><td>Resume tips, interview prep</td><td>Med</td><td>High</td><td>Later</td></tr></table>
+</section>
+
+<section class="cs" id="ui">
+  <span class="tag">4. Prototype: UI system</span>
+  <h2>Visual design</h2>
+  <p>Calm teal for action and progress, deep navy for trust, a single yellow for highlights. Bricolage Grotesque for headings gives a friendly, youthful voice; Figtree keeps body text clear on small screens.</p>
+  <div class="sw"><div><b style="background:#14213d"></b>Navy #14213D</div><div><b style="background:#0b8f7e"></b>Teal #0B8F7E</div><div><b style="background:#ffc857"></b>Sun #FFC857</div><div><b style="background:#e4572e"></b>Coral #E4572E</div><div><b style="background:#f7f8fa"></b>Mist #F7F8FA</div></div>
+  <p class="note" style="margin-top:12px">Screens in the prototype: Welcome, Jobs, Job detail, Apply sheet, Saved, Applications, Profile. To move this into Figma, recreate these screens with the tokens above (8px spacing grid, 12–14px radii, 44px minimum touch targets) and link them with the flow shown earlier.</p>
+</section>
+
+<section class="cs" id="test">
+  <span class="tag">5. Test</span>
+  <h2>Usability test plan</h2>
+  <table><tr><th>Task</th><th>Success metric</th></tr>
+  <tr><td>Find a remote internship and save it</td><td>Under 30 seconds</td></tr>
+  <tr><td>Complete profile and upload resume</td><td>Reach 100% unaided</td></tr>
+  <tr><td>Apply to a job</td><td>3 taps or fewer</td></tr>
+  <tr><td>Check status of an application</td><td>Finds it in 10 seconds</td></tr></table>
+  <h3 style="margin-top:16px">Findings and iterations (sample)</h3>
+  <ul><li>Testers missed the Apply button below the fold, so it now sticks to the bottom of the job detail.</li><li>Users wanted proof an application went through, so a confirmation toast and tracker entry were added.</li><li>Profile felt endless, so a completion meter with a checklist was added.</li></ul>
+</section>
+</main>
+</div></div></body></html>
